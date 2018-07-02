@@ -1,0 +1,135 @@
+/* CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*** Custom CSS ***/
+
+html {
+	background: #444466;
+	background: radial-gradient(circle, rgba(68,68,102,1) 75%, rgba(55,55,89,1) 100%);
+}
+
+body {
+	font: 16px 'Didact Gothic', sans-serif; 
+	color: #333;
+}
+
+header {
+	padding: 30px 0;
+	border-bottom: 1px solid #9191b3;
+	margin-bottom: 36px;
+}
+	
+header h1 {
+	text-align: center;
+	color: #ddd;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#city-list {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.city, #city-details {
+	background: #13c8ed;
+	background: radial-gradient(ellipse at top right, rgba(255,255,255,1) 0%, rgba(19,200,237,1) 80%);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 5px 5px 8px rgba(51,51,51,0.5);
+}
+
+.city {
+	width: 15%;
+	cursor: pointer;
+}
+
+.city:hover {
+	background: radial-gradient(ellipse at top right, rgba(255,255,255,1) 20%, rgba(19,200,237,1) 90%);
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+
+.icon {
+	float: left;
+	margin-right: 10px;
+}
+
+.city .icon {
+	width: 30%;
+}
+
+.temp, h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.weather-details {
+	display: flex;
+}
+
+.weather-details div {
+	width: 25%;
+}
+
+p.desc::first-letter {
+	text-transform: uppercase;
+}

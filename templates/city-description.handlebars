@@ -1,0 +1,20 @@
+<h2>{{name}}</h2>
+<div class="weather-details">
+	<div>
+		<img class="icon" src="http://openweathermap.org/img/w/{{weather.[0].icon}}.png" />
+		<p class="temp">{{main.temp}}&deg; F</p>
+		<p class="desc">{{weather.[0].description}}</p>
+	</div>
+	<div>
+		<h3>Humidity</h3>
+		<p>{{main.humidity}}%</p>
+	</div>
+	<div>
+		<h3>Wind Speed</h3>
+		<p>{{wind.speed}}mph</p>
+	</div>
+	<div>
+		<h3>Clouds</h3>
+		<p>{{clouds.all}}%</p>
+	</div>
+</div>

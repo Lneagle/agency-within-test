@@ -1,0 +1,8 @@
+{{#each list}}
+<div class="city" data-index="{{@index}}">
+	<h2>{{name}}</h2>
+	<img class="icon" src="http://openweathermap.org/img/w/{{weather.[0].icon}}.png" />
+	<p class="temp">{{main.temp}}&deg; F</p>
+	<p>{{weather.[0].main}}</p>
+</div>
+{{/each}}
