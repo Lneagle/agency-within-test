@@ -23,8 +23,20 @@
 		<h1>Weather Station</h1>
 	</header>
 	<main>
-		<section id="city-list">Loading...</section>
-		<section id="city-details">Click on one of the cities above for more detailed weather information</section>
+		<section id="city-choice">
+			<label for="city-select">Please choose five cities:</label>
+			<select id="city-select" multiple size="1">
+				<option value="none" selected>-- Select --</option>
+			</select>
+			<button id="choose-cities">Get Weather</button>
+			<p id="disabled-message">Due to constraints from the weather service, you may only choose cities once every ten minutes</p>
+		</section>
+		<section id="city-list">
+			
+		</section>
+		<section id="city-details">
+			<p>Click on one of the cities above for more detailed weather information</p>
+		</section>
 	</main>
 </body>
 </html>

@@ -1,18 +1,26 @@
 $(document).ready(function() {
 	var lastRetrieved = parseInt(localStorage.getItem('lastRetrieved'));
-	var weatherData;
 	if (lastRetrieved && $.now()-lastRetrieved < 600000) {
 		displayWeather();
 	} else {
-		$.getJSON('http://api.openweathermap.org/data/2.5/group?id=5128638,703448,2643743,1816670,3582677&units=imperial&APPID=ca591fc6223148d336e26af601d6697a', function(data) {
+		$.getJSON('files/city.list.json', function(data){
+			$('#city-select').append(Handlebars.templates['city-list'](data));
+		});
+	};
+	
+	$('#choose-cities').on('click', function() {
+		var list = $('#city-select').val().join();
+		$.getJSON('http://api.openweathermap.org/data/2.5/group?id=' + list + '&units=imperial&APPID=ca591fc6223148d336e26af601d6697a', function(data) {
 			localStorage.setItem('wdata', JSON.stringify(data));
 			localStorage.setItem('lastRetrieved', $.now());
 		}).done( function() {
 			displayWeather();
 		});
-	};
+	});
 	
 	function displayWeather() {
+		$('#city-select').attr('disabled', 'true');
+		$('#disabled-message').css('display', 'block');
 		$('#city-list').html('');
 		var wdata = JSON.parse(localStorage.getItem('wdata'));
 		var templateScript = Handlebars.templates['city-overview'](wdata);
