@@ -93,7 +93,7 @@ main {
 }
 
 .city {
-	width: 15%;
+	width: 14%;
 	cursor: pointer;
 }
 
@@ -133,3 +133,43 @@ h2 {
 p.desc::first-letter {
 	text-transform: uppercase;
 }
+
+@media all and (min-width: 737px) and (max-width: 980px) {
+	body {
+		font-size: 14px;
+	}
+	
+	h2 {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	
+	.temp, h3 {
+		font-size: 14px;
+	}
+	
+	.city {
+		width: 12%;
+	}
+	
+	.city .icon {
+		float:none;
+		width: auto;
+	}
+}
+
+@media all and (max-width: 736px) {
+	#city-list, .weather-details {
+		flex-direction: column;
+	}
+	
+	.city, .weather-details div {
+		width:auto;
+		margin-bottom: 10px;
+	}
+	
+	.city .icon {
+		width: auto;
+	}
+}
+	
