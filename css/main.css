@@ -134,13 +134,6 @@ p.desc::first-letter {
 	text-transform: uppercase;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
 @media all and (min-width: 737px) and (max-width: 980px) {
 	body {
 		font-size: 14px;
