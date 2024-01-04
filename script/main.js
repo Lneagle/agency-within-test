@@ -4,7 +4,7 @@ $(document).ready(function() {
 	if (lastRetrieved && $.now()-lastRetrieved < 600000) {
 		displayWeather();
 	} else {
-		$.getJSON('http://api.openweathermap.org/data/2.5/group?id=5128638,703448,2643743,1816670,3582677&units=imperial&APPID=ca591fc6223148d336e26af601d6697a', function(data) {
+		$.getJSON('https://api.openweathermap.org/data/2.5/group?id=5128638,703448,2643743,1816670,3582677&units=imperial&APPID=ca591fc6223148d336e26af601d6697a', function(data) {
 			localStorage.setItem('wdata', JSON.stringify(data));
 			localStorage.setItem('lastRetrieved', $.now());
 		}).done( function() {
